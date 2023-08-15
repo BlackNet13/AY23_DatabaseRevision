@@ -26,7 +26,22 @@ public class RetrieveActivityTextView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                DBHelper db = new DBHelper(RetrieveActivityTextView.this);
 
+                // Retrieve notes as ArrayList of Note objects
+                ArrayList<Note> notes = db.getNotesInObjects();
+
+                // Display the notes in the TextView
+                StringBuilder results = new StringBuilder();
+                for (Note note : notes) {
+                    results.append("ID: ").append(note.getId()).append("\n");
+                    results.append("Content: ").append(note.getContent()).append("\n");
+                    results.append("Priority: ").append(note.getPriority()).append("\n\n");
+                }
+
+                tvResults.setText(results.toString());
+
+                db.close();
 
 
             }

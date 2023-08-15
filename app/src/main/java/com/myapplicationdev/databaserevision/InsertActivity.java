@@ -31,8 +31,27 @@ public class InsertActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Create the DBHelper object, passing in the activity's Context
+                String content = etContent.getText().toString().trim();
+                String priorityStr = etPriority.getText().toString().trim();
+
+                if (content.isEmpty() || priorityStr.isEmpty()) {
+                    Log.d("InsertActivity", "Input fields are empty");
+                    return;
+                }
+
+                int priority = Integer.parseInt(priorityStr);
+
+
+
                 DBHelper db = new DBHelper(InsertActivity.this);
 
+                long insertedId = db.insertTask(content, priority);
+
+                if (insertedId != -1) {
+                    Log.d("InsertActivity", "Task inserted successfully with ID: " + insertedId);
+                } else {
+                    Log.d("InsertActivity", "Error inserting task");
+                }
 
                 //db.insertTask();
                 db.close();

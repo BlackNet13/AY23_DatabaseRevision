@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Database Revision</string>
+    <string name="insertRecord">Activity to insert record</string>
+    <string name="getRecordsTV">Activity to retrieve records (TextView)</string>
+    <string name="getRecordsLV">Activity to retrieve records (ListView)</string>
 </resources>

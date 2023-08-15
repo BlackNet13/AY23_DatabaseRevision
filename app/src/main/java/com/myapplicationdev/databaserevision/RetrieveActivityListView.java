@@ -44,6 +44,16 @@ public class RetrieveActivityListView extends AppCompatActivity {
             }
         });
 
+                ArrayList<Note> notes = db.getNotesInObjects();
+
+                // Clear the existing list and add retrieved notes
+                al.clear();
+                al.addAll(notes);
+
+                // Notify the ArrayAdapter about the data change
+                aa.notifyDataSetChanged();
+
+                db.close();
 
         //Option: Implement dialog to edit a record
         //Option: Implement context to delete a record

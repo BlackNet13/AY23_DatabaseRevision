@@ -65,8 +65,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
-                //data retrieval in String
-                //tasks.add(cursor.getString(0));
+                int id = cursor.getInt(0);
+                String content = cursor.getString(1);
+                String priority = cursor.getString(2);
+                tasks.add(id + ", " + content + ", " + priority);
             } while (cursor.moveToNext());
         }
 
@@ -92,7 +94,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 //data retrieval in object
                 int id = cursor.getInt(0);
                 String content = cursor.getString(1);
-                String priority = cursor.getString(2);
+                int priority = cursor.getInt(2);
                 Note note = new Note(id,content,priority);
                 notes.add(note);
             } while (cursor.moveToNext());

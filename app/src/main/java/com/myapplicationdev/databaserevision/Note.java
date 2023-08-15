@@ -3,9 +3,9 @@ package com.myapplicationdev.databaserevision;
 public class Note {
     private int id;
     private String content;
-    private String priority;
+    private int priority;
 
-    public Note(int id, String content, String priority) {
+    public Note(int id, String content, int priority) {
         this.id = id;
         this.content = content;
         this.priority = priority;
@@ -27,11 +27,11 @@ public class Note {
         this.content = content;
     }
 
-    public String getPriority() {
+    public int getPriority() {
         return priority;
     }
 
-    public void setPriority(String priority) {
-        this.priority = priority;
+    public String toString(){
+        return String.format("id: %d \tcontent: %s \tpriority: %s", id, content, priority);
     }
 }

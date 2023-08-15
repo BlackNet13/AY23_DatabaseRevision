@@ -58,7 +58,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public ArrayList<String> getNotesInStrings() {
         ArrayList<String> tasks = new ArrayList<String>();
 
-        String selectQuery = "SELECT " + COLUMN_CONTENT  + " FROM " + TABLE_NOTE;
+        String selectQuery = "SELECT " + COLUMN_ID + ", " + COLUMN_CONTENT + ", " + COLUMN_PRIORITY  + " FROM " + TABLE_NOTE;
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

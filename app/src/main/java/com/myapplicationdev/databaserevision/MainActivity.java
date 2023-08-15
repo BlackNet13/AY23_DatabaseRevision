@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnInsertRecord = findViewById(R.id.btnInsertRecord);
-        btnRetrieveRecords = findViewById(R.id.btnGetRecord);
-        btnRetrieveRecordsLV = findViewById(R.id.btnGetRecordLV);
+        btnRetrieveRecords = findViewById(R.id.btnGetRecordTv);
+        btnRetrieveRecordsLV = findViewById(R.id.btnGetRecordLv);
 
         btnInsertRecord.setOnClickListener(new View.OnClickListener(){
             @Override

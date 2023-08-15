@@ -16,13 +16,13 @@
         android:text="@string/insertRecord" />
 
     <Button
-        android:id="@+id/btnGetRecord"
+        android:id="@+id/btnGetRecordTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/getRecordsTV" />
 
     <Button
-        android:id="@+id/btnGetRecord2"
+        android:id="@+id/btnGetRecordLv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/getRecordsLV" />

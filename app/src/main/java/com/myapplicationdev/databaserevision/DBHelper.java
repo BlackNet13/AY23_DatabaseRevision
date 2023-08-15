@@ -44,7 +44,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public void insertTask(String content, int priority){
         SQLiteDatabase db = this.getWritableDatabase();
-        //Todo complete this
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_CONTENT, content);

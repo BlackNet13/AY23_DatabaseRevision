@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".RetrieveActivityTextView">
 
-
     <Button
         android:id="@+id/btnGetTasks"
         android:layout_width="match_parent"
@@ -19,15 +18,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-
         <TextView
             android:id="@+id/tvResults"
             android:backgroundTint="@color/material_dynamic_secondary95"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#00ddff" />
-
     </ScrollView>
-
-
 </LinearLayout>

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,6 +42,8 @@ public class InsertActivity extends AppCompatActivity {
 
                 int priority = Integer.parseInt(priorityStr);
 
+                String insertContent = etContent.getText().toString();
+                String insertPriority = etPriority.getText().toString();
 
 
                 DBHelper db = new DBHelper(InsertActivity.this);
@@ -53,7 +56,9 @@ public class InsertActivity extends AppCompatActivity {
                     Log.d("InsertActivity", "Error inserting task");
                 }
 
-                //db.insertTask();
+                db.insertContent(insertContent,insertPriority);
+                Toast toast = Toast.makeText(btnInsert.getContext(), "Task added successfully", Toast.LENGTH_LONG);
+                toast.show();
                 db.close();
             }
         });

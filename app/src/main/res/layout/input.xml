@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvInput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Content here" />
+
+    <EditText
+        android:id="@+id/edInput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tvInput2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="number(1,2,3...)" />
+
+    <EditText
+        android:id="@+id/edInput2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+</LinearLayout>

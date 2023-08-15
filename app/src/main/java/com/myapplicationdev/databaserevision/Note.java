@@ -1,6 +1,8 @@
 package com.myapplicationdev.databaserevision;
 
-public class Note {
+import java.io.Serializable;
+
+public class Note implements Serializable {
     private int id;
     private String content;
     private int priority;
@@ -29,6 +31,11 @@ public class Note {
 
     public int getPriority() {
         return priority;
+    }
+
+    public void setNote(String content, int priority){
+        this.content = content;
+        this.priority = priority;
     }
 
     public String toString(){

@@ -50,7 +50,7 @@ public class RetrieveActivityListView extends AppCompatActivity {
 
 
 
-        MaterialDialog deleteDialog = new MaterialDialog.Builder(this)
+        /*MaterialDialog deleteDialog = new MaterialDialog.Builder(this)
                 .setTitle("Delete")
                 .setMessage("Delete data?")
                 .setCancelable(false)
@@ -115,7 +115,7 @@ public class RetrieveActivityListView extends AppCompatActivity {
                 initDialog.show();
             }
         });
-
+        */
 
         //Option: Implement dialog to edit a record
         //Option: Implement context to delete a record

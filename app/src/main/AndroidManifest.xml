@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DatabaseRevision"
         tools:targetApi="31">
+
+        <activity android:name=".RetrieveActivityListView"
+           android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".RetrieveActivityTextView"
+            android:exported="false">
+
+        </activity>
+
+        <activity
+            android:name=".InsertActivity"
+            android:exported="false">
+
+        </activity>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

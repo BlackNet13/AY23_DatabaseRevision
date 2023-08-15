@@ -17,6 +17,7 @@ public class RetrieveActivityListView extends AppCompatActivity {
     ListView lv;
     ArrayAdapter<Note> aa;
     ArrayList<Note> al;
+    ArrayList<Note> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,10 @@ public class RetrieveActivityListView extends AppCompatActivity {
             public void onClick(View v) {
                 // Create the DBHelper object, passing in the activity's Context
                 DBHelper db = new DBHelper(RetrieveActivityListView.this);
-
+                data = db.getNotesInObjects();
+                for(int i = 0; i<data.size(); i++){
+                    al.add(data.get(i));
+                }
 
             }
         });
